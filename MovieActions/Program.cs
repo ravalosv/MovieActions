@@ -11,6 +11,29 @@ namespace MoveFiles
     {
         static void Main(string[] args)
         {
+            //char c = 'ブ'; //IsLetter
+            ////char c = 'É'; //IsLetter
+            ////char c = '#'; //IsPunctuation
+            ////char c = '¡'; //IsPunctuation
+
+            //c = '아';
+
+            //var i = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".Contains(c);
+
+            //if (char.IsDigit(c))
+            //    Console.WriteLine("isDigit");
+            //if (char.IsLetter(c))
+            //    Console.WriteLine("IsLetter");
+            //if (char.IsPunctuation(c))
+            //    Console.WriteLine("IsPunctuation");
+            //if (char.IsSymbol(c))
+            //    Console.WriteLine("IsSymbol");
+            //if (char.IsControl(c))
+            //    Console.WriteLine("IsControl");
+            //if (char.IsSurrogate(c))
+            //    Console.WriteLine("IsSurrogate");
+
+
             Actions a = new Actions();
 
             //var startLocation = @"M:\My Media\Infantiles";
@@ -34,17 +57,18 @@ namespace MoveFiles
             //a.MoverASuLetraCorrespondiente(@"Z:\My Media\Peliculas 2\F", @"Z:\My Media\Peliculas 2");
             //a.MoverASuLetraCorrespondiente(@"Z:\My Media\Peliculas 2\G", @"Z:\My Media\Peliculas 2");
 
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Acción", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Accion", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Action", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Adventure", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Aventura", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventuras\Animación", @"M:\My Media\Peliculas\!Accion-Aventura\Animación");
+            
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Acción", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Accion", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Action", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Adventure", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Aventura", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Animación", @"M:\My Media\Peliculas\!Accion-Aventura\Animación");
             a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
             a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Ciencia ficción", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
             a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Fantasía", @"M:\My Media\Peliculas\!Accion-Aventura\Fantasía");
             a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Thriller", @"M:\My Media\Peliculas\!Accion-Aventura\Thriller");
-
+            
 
 
 

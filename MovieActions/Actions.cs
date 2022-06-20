@@ -9,6 +9,8 @@ namespace MoveFiles
 {
     public class Actions
     {
+        string duplicatedPathFiles = @"M:\My Media\Peliculas\Duplicados";
+
         // Mueve archivos de una carpeta hacia las subcarpetas con su primer letra
         public void MoverDeACarpeta(string origen, string destino)
         {
@@ -21,27 +23,34 @@ namespace MoveFiles
                 
             }
 
+            // Move duplicated files... those who has "(1)."
+            var dup = files.FindAll(p => p.Contains("(1)."));
+            foreach (string file in dup)
+            {
+                string fileName = Path.GetFileName(file);
+                string fileDest2 = Path.Combine(duplicatedPathFiles, fileName);
+                Console.WriteLine("Moviendo a Duplicados: " + fileName);
+                try
+                {
+                    File.Move(file, fileDest2);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("ERROR: " + fileName);
+                }
+            }
+
             // remove duplicated files
-            files.RemoveAll(p => p.Contains("(1)"));
-            
+            files.RemoveAll(p => p.Contains("(1)."));
+
+
+            // reorder files 
             foreach (string file in files)
             {
                 string fileName = Path.GetFileName(file);
-                string firstLetter = fileName.Substring(0, 1);
-
-                //string dirDest = "";
 
 
-                if (char.IsDigit(char.Parse(firstLetter)))
-                {
-                    firstLetter = "#";
-                } else if (char.IsLetter(char.Parse(firstLetter)))
-                {
-                    ; // No hacer nada
-                } else
-                {
-                    firstLetter = "";
-                }
+                string firstLetter = getFirstLetterFolder(fileName);
 
                 if (firstLetter != "")
                 {
@@ -58,14 +67,33 @@ namespace MoveFiles
 
                         string fileDest = Path.Combine(dirDest, fileName);
 
-                        try
+                        // Verify if file exists in destination
+                        if (!File.Exists(fileDest))
                         {
-                            Console.WriteLine("Moviendo: " + fileName);
-                            File.Move(file, fileDest);
-                        }
-                        catch (Exception ex)
+                            try
+                            {
+                                Console.WriteLine("Moviendo: " + fileName);
+                                File.Move(file, fileDest);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("ERROR: " + fileName);
+                            }
+                        } else
                         {
-                            Console.WriteLine("ERROR: " + fileName);
+                            // Move to duplicated folder
+                            string fileDest2 = Path.Combine(duplicatedPathFiles, fileName);
+                            Console.WriteLine("Moviendo a Duplicados: " + fileName);
+                            try
+                            {
+                                File.Move(file, fileDest2);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine("ERROR: " + fileName);
+                            }
+
+
                         }
                     }
 
@@ -75,6 +103,47 @@ namespace MoveFiles
 
         }
 
+        private string getFirstLetterFolder(string fileName)
+        {
+            string firstLetter = fileName.ToUpper().Substring(0, 1);
+
+            //string dirDest = "";
+
+            if (char.IsPunctuation(char.Parse(firstLetter)))
+            {
+                // Take next letter
+                firstLetter = fileName.Substring(1, 1);
+            }
+
+
+            if (char.IsDigit(char.Parse(firstLetter)))
+            {
+                firstLetter = "#";
+            }
+            else if (char.IsLetter(char.Parse(firstLetter)))
+            {
+                // Verify if letter has accent
+                if (firstLetter == "Á") firstLetter = "A";
+                if (firstLetter == "É") firstLetter = "E";
+                if (firstLetter == "Í") firstLetter = "I";
+                if (firstLetter == "Ó") firstLetter = "O";
+                if (firstLetter == "Ú") firstLetter = "U";
+
+                var isLetter = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ".Contains(firstLetter);
+
+                if(!isLetter)
+                {
+                    firstLetter = "Taka Taka";  // return Taka Taka Folder
+                }
+            }
+            else
+            {
+                firstLetter = "";
+            }
+
+            return firstLetter;
+
+        }
 
 
         // Mueve los archivos de subfolder hacia la carpeta root
