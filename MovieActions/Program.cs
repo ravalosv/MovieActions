@@ -57,65 +57,77 @@ namespace MoveFiles
             //a.MoverASuLetraCorrespondiente(@"Z:\My Media\Peliculas 2\F", @"Z:\My Media\Peliculas 2");
             //a.MoverASuLetraCorrespondiente(@"Z:\My Media\Peliculas 2\G", @"Z:\My Media\Peliculas 2");
 
-            
+
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Acción", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Accion", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Action", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Adventure", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Aventura", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Animación", @"M:\My Media\Peliculas\!Accion-Aventura\Animación");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Ciencia ficción", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Fantasía", @"M:\My Media\Peliculas\!Accion-Aventura\Fantasía");
-            a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Thriller", @"M:\My Media\Peliculas\!Accion-Aventura\Thriller");
-            
+
+
+            a.deleteFiles("*(?).*", @"Z:\My Media\00. POR ORDENAR\Baul");
+            a.deleteFiles("*.nfo", @"Z:\My Media\00. POR ORDENAR\Baul");
+            a.deleteFiles("*.srt", @"Z:\My Media\00. POR ORDENAR\Baul");
+
+
+
+            //a.deleteFiles("*.nfo", @"Z:\My Media\Alpha");
+            //a.deleteFiles("*.srt", @"Z:\My Media\Alpha");
+
+
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Ciencia ficción", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Fantasía", @"M:\My Media\Peliculas\!Accion-Aventura\Fantasía");
+            //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Thriller", @"M:\My Media\Peliculas\!Accion-Aventura\Thriller");
 
 
 
 
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Acción", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Accion", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Action", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Adventure", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Aventura", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animación", @"M:\My Media\Peliculas\!Accion-Aventura\Animación");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Ciencia Ficcion", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Ciencia ficción", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Fantasía", @"M:\My Media\Peliculas\!Accion-Aventura\Fantasía");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Thriller", @"M:\My Media\Peliculas\!Accion-Aventura\Thriller");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animación", @"M:\My Media\Peliculas\!Animacion-Infantiles\Animación");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animación 1", @"M:\My Media\Peliculas\!Animacion-Infantiles\Animación");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animation", @"M:\My Media\Peliculas\!Animacion-Infantiles\Animación");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Acción", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Accion", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Action", @"M:\My Media\Peliculas\!Accion-Aventura\Acción");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Adventure", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Aventura", @"M:\My Media\Peliculas\!Accion-Aventura\Aventura");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animación", @"M:\My Media\Peliculas\!Accion-Aventura\Animación");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Ciencia Ficcion", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Ciencia ficción", @"M:\My Media\Peliculas\!Accion-Aventura\Ciencia Ficcion");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Fantasía", @"M:\My Media\Peliculas\!Accion-Aventura\Fantasía");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Thriller", @"M:\My Media\Peliculas\!Accion-Aventura\Thriller");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Comedia", @"M:\My Media\Peliculas\!Comedia-Comedy\Comedia");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Comedy", @"M:\My Media\Peliculas\!Comedia-Comedy\Comedia");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animación", @"M:\My Media\Peliculas\!Animacion-Infantiles\Animación");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animación 1", @"M:\My Media\Peliculas\!Animacion-Infantiles\Animación");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Animation", @"M:\My Media\Peliculas\!Animacion-Infantiles\Animación");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Documental", @"M:\My Media\Peliculas\!Documental-Programa TV-Musical\Documental");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Música", @"M:\My Media\Peliculas\!Documental-Programa TV-Musical\Música");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Película de TV", @"M:\My Media\Peliculas\!Documental-Programa TV-Musical\Película de TV");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Comedia", @"M:\My Media\Peliculas\!Comedia-Comedy\Comedia");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Comedy", @"M:\My Media\Peliculas\!Comedia-Comedy\Comedia");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Drama", @"M:\My Media\Peliculas\!Drama-Romance-Familia\Drama");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Familia", @"M:\My Media\Peliculas\!Drama-Romance-Familia\Familia");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Romance", @"M:\My Media\Peliculas\!Drama-Romance-Familia\Romance");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Documental", @"M:\My Media\Peliculas\!Documental-Programa TV-Musical\Documental");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Música", @"M:\My Media\Peliculas\!Documental-Programa TV-Musical\Música");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Película de TV", @"M:\My Media\Peliculas\!Documental-Programa TV-Musical\Película de TV");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Historia", @"M:\My Media\Peliculas\!Otros Generos\Historia");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Drama", @"M:\My Media\Peliculas\!Drama-Romance-Familia\Drama");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Familia", @"M:\My Media\Peliculas\!Drama-Romance-Familia\Familia");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Romance", @"M:\My Media\Peliculas\!Drama-Romance-Familia\Romance");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Horror", @"M:\My Media\Peliculas\!Terror-Suspenso\Horror");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Misterio", @"M:\My Media\Peliculas\!Terror-Suspenso\Misterio");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Suspense", @"M:\My Media\Peliculas\!Terror-Suspenso\Suspense");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Terror", @"M:\My Media\Peliculas\!Terror-Suspenso\Terror");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Historia", @"M:\My Media\Peliculas\!Otros Generos\Historia");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Bélica", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Bélica");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Crimen", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Crimen");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Crimen 2", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Crimen 2");
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Western", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Western");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Horror", @"M:\My Media\Peliculas\!Terror-Suspenso\Horror");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Misterio", @"M:\My Media\Peliculas\!Terror-Suspenso\Misterio");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Suspense", @"M:\My Media\Peliculas\!Terror-Suspenso\Suspense");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Terror", @"M:\My Media\Peliculas\!Terror-Suspenso\Terror");
 
-            a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Peliculas 4K", @"M:\My Media\Peliculas 4k");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Bélica", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Bélica");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Crimen", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Crimen");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Crimen 2", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Crimen 2");
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Western", @"M:\My Media\Peliculas\!Western-Crimen-Guerra\Western");
+
+            //a.MoverDeACarpeta(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\Peliculas 4K", @"M:\My Media\Peliculas 4k");
 
 
-            a.deleteEmptyDirectories(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\");
+            //a.deleteEmptyDirectories(@"M:\My Media\00. POR ORDENAR\FreeCloud\Generos\");
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas 4k", @"M:\My Media\Peliculas 4k");
 
 

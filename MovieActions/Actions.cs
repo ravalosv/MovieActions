@@ -237,5 +237,34 @@ namespace MoveFiles
                 }
             }
         }
+
+        public void deleteFiles(string pattern, string currentFolder)
+        {
+            var files = Directory.GetFiles(currentFolder, pattern, SearchOption.AllDirectories).ToList<String>();
+
+            files.RemoveAll(p => p.EndsWith("movie.nfo"));
+
+            foreach(string f in files)
+            {
+                try
+                {
+                    Console.WriteLine("DELETING: " + f);
+                    File.Delete(f);
+                    
+                } catch(Exception ex)
+                {
+                    Console.WriteLine("ERROR: " + ex.Message);
+                }
+
+            }
+
+
+        }
+
+
+
+
+
+
     }
 }
