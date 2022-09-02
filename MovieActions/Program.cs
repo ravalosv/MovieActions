@@ -66,9 +66,9 @@ namespace MoveFiles
             //a.MoverDeACarpeta(@"M:\My Media\Peliculas\!Accion-Aventura\Animación", @"M:\My Media\Peliculas\!Accion-Aventura\Animación");
 
 
-            a.deleteFiles("*(?).*", @"Z:\My Media\00. POR ORDENAR\Baul");
-            a.deleteFiles("*.nfo", @"Z:\My Media\00. POR ORDENAR\Baul");
-            a.deleteFiles("*.srt", @"Z:\My Media\00. POR ORDENAR\Baul");
+            //a.deleteFiles("*(?).*", @"Z:\My Media\00. POR ORDENAR\Baul");
+            a.deleteFiles("*.nfo", @"Z:\My Media 2\Plex");
+            a.deleteFiles("*.srt", @"Z:\My Media 2\Plex");
 
 
 

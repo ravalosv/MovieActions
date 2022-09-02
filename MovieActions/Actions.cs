@@ -240,9 +240,15 @@ namespace MoveFiles
 
         public void deleteFiles(string pattern, string currentFolder)
         {
+            Console.WriteLine($"Obteniendo archivos a borrar ({pattern}) desde: {currentFolder}");
+
             var files = Directory.GetFiles(currentFolder, pattern, SearchOption.AllDirectories).ToList<String>();
 
             files.RemoveAll(p => p.EndsWith("movie.nfo"));
+            files.RemoveAll(p => p.EndsWith("tvshow.nfo"));
+            files.RemoveAll(p => p.EndsWith("season.nfo"));
+
+            Console.WriteLine($"Se encontraron {files.Count} archivos.");
 
             foreach(string f in files)
             {
@@ -262,6 +268,35 @@ namespace MoveFiles
         }
 
 
+        public void deleteFilesAsync(string pattern, string currentFolder)
+        {
+            Console.WriteLine($"Obteniendo archivos a borrar ({pattern}) desde: {currentFolder}");
+
+            var files = Directory.GetFiles(currentFolder, pattern, SearchOption.AllDirectories).ToList<String>();
+
+            files.RemoveAll(p => p.EndsWith("movie.nfo"));
+            files.RemoveAll(p => p.EndsWith("tvshow.nfo"));
+            files.RemoveAll(p => p.EndsWith("season.nfo"));
+
+            Console.WriteLine($"Se encontraron {files.Count} archivos.");
+
+            foreach (string f in files)
+            {
+                try
+                {
+                    Console.WriteLine("DELETING: " + f);
+                    File.Delete(f);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("ERROR: " + ex.Message);
+                }
+
+            }
+
+
+        }
 
 
 
